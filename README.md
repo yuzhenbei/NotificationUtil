@@ -1,12 +1,15 @@
 # NotificationUtil
 
 * 实现
+
 获取系统通知栏的背景颜色
 
 * 目的
+
 实现自定义的通知栏根据系统系统通知栏的背景颜色实现不同的颜色布局。
 
 * 支持范围
+
 Android 10.x 、Android 9.x、Android 8.x、Android 7.x 、Android 6.x、Android 5.x、Android 4.x
 
 * 为什么Android 7.x及以上版本notification.contentVie的值为NUll,查看源码Notification.Builder:
