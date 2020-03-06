@@ -10,6 +10,8 @@
 Android 10.x 、Android 9.x、Android 8.x、Android 7.x 、Android 6.x、Android 5.x、Android 4.x
 
 * 为什么Android 7.x及以上版本notification.contentVie的值为NUll
+
+
     api-24
     Notification.Builder:
         public Notification build() {
@@ -42,6 +44,8 @@ Android 10.x 、Android 9.x、Android 8.x、Android 7.x 、Android 6.x、Android
 根据上面的Framework代码可以看出，把targetSdkVersion设置成23后就不会返回Null，但是目前Google Play及中国各大应用市场都有要求targetSdkVersion不低于28，那还是要有办法就行解决，我提供的这个工具就完美解决了这个问题。
 
 *解决Android 7.x及以上版本notification.contentVie的值为NUll的关键代码
+
+
     val cv: RemoteViews = (if (notification.contentView == null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 Notification.Builder.recoverBuilder(pContext, notification).createContentView()
